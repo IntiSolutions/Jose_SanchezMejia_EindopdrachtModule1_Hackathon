@@ -1,0 +1,126 @@
+.ParentFirm {
+  border: 2px solid grey;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr 350px 50px;
+  grid-template-rows: 80px 780px 1fr;
+  grid-template-areas:
+    ". Fmenu header header menu ."
+    "main main main main main main"
+    "foot foot foot foot foot foot";
+}
+.Fmenu {
+  margin: 0px;
+  padding-left: 0px;
+  margin-top: 3px;
+  grid-area: Fmenu;
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: ". logo .";
+}
+.logo {
+  grid-area: logo;
+}
+.menu {
+  grid-area: menu;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 0px;
+}
+
+.menu > ul {
+  margin: 0px;
+  padding: 0px;
+}
+.menu li {
+  text-align: center;
+  float: left;
+  width: 20%;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.menu a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-family: "Times New Roman";
+  font-size: 16px;
+}
+.menu a:hover {
+  background-color: #f2c94c;
+}
+.main {
+  grid-area: main;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: rgb(235, 219, 199);
+  margin-bottom: 0px;
+}
+
+.tekstformatmain002 {
+  font-family: "Times New Roman";
+  text-align: justify;
+  font-size: 16px;
+  margin-left: 100px;
+  width: 75%;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.tekstformatmain002 > a {
+  text-decoration: none;
+}
+
+.tekstformatmain002 h3 {
+  font-size: 30px;
+  line-height: 0px;
+}
+.ul002 {
+  margin-top: 2px;
+  padding-left: 35px;
+}
+.Mbutton {
+  font-size: 12px;
+  display: block;
+  background-color: #f2c94c;
+  padding: 9px;
+  border-radius: 30px;
+  border: 0px;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.foot {
+  grid-area: foot;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: rgb(223, 216, 208);
+  font-family: "Times New Roman";
+  text-align: justify;
+  font-size: 14px;
+}
+.foot > a {
+  text-decoration: none;
+}
+.Fbutton {
+  font-size: 12px;
+  display: block;
+  background-color: #f2c94c;
+  padding: 5px;
+  border-radius: 30px;
+  border: 0px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.foot > .Smedia {
+  text-align: right;
+}
