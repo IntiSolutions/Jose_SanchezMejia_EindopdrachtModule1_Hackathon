@@ -255,7 +255,7 @@ figure {
   padding-left: 0px;
   grid-area: foot;
   display: grid;
-  grid-template-columns: 80px 1fr 1fr;
+  grid-template-columns: 70px 1fr 1fr;
   grid-template-rows: 70px 1fr;
   grid-template-areas:
     ". Norea ."
