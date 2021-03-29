@@ -1,0 +1,569 @@
+body {
+  font-size: 100%;
+  margin: 0 auto;
+  width: 99%;
+}
+.Pcontainer {
+  border: 2px solid grey;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 50px 100px 1fr 1fr;
+  grid-template-rows: 80px 270px 300px 210px 160px 190px;
+  grid-template-areas:
+    "logo header menu menu"
+    "Pcon Pcon Pcon Pcon"
+    "Scon Scon Scon Scon"
+    "feat feat feat feat"
+    "rev rev rev rev"
+    "foot foot foot foot";
+}
+@media screen and (min-width: 800px) {
+  .Pcontainer {
+    grid-template-columns: 20px 128px 1fr 1fr 120px 170px 90px 20px;
+    grid-template-rows: 80px 1fr 1fr 175px 1fr 150px;
+    grid-template-areas:
+      "logo logo . header menu menu menu ."
+      "Pcon Pcon Pcon Pcon Pcon Pcon Pcon Pcon"
+      "Scon Scon Scon Scon Scon Scon Scon Scon"
+      "feat feat feat feat feat feat feat feat"
+      ". rev rev rev rev rev rev ."
+      "foot foot foot foot foot foot foot foot";
+  }
+}
+
+.logo {
+  margin-left: 0px;
+  margin-top: 3px;
+  grid-area: logo;
+}
+@media screen and (min-width: 800px) {
+  #menuimage {
+    width: 50px;
+    height: 32.745px;
+  }
+}
+
+.logo > a {
+  margin: 0px;
+}
+
+.header {
+  margin: 0px;
+  padding: 0px;
+  grid-area: header;
+}
+@media screen and (min-width: 800px) {
+  #logoimage {
+    width: 118px;
+    height: 73px;
+  }
+}
+.header > a {
+  margin: 0px;
+}
+.menu {
+  grid-area: menu;
+  margin: 0px;
+  padding: 0px;
+}
+
+.menu > ul {
+  margin: 0px;
+  padding: 0px;
+}
+.menu li {
+  float: left;
+  width: 24%;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+.menu a {
+  text-align: center;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 5px;
+  border: 0px;
+  text-decoration: none;
+  color: black;
+  font-family: "Times New Roman";
+  font-size: 60.5%;
+}
+@media screen and (min-width: 800px) {
+  .menu a {
+    font-size: 105%;
+  }
+}
+
+.menu a:hover {
+  background-color: #f2c94c;
+}
+
+.Pcontent {
+  margin: 0px;
+  grid-area: Pcon;
+  font-family: "times new roman";
+  font-size: 72.5%;
+  text-align: justify;
+  padding-right: 10px;
+  text-decoration: none;
+  background-color: rgb(235, 219, 199);
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "text text"
+    "fig Pbutton";
+}
+@media screen and (min-width: 800px) {
+  .Pcontent {
+    font-size: 97.5%;
+    text-align: justify;
+    padding-right: 50px;
+    background-color: rgb(235, 219, 199);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 40px;
+    grid-template-areas:
+      "fig Ptext"
+      "fig Pbutton";
+  }
+}
+
+.Ptext {
+  margin-left: 0px;
+  margin-bottom: 0px;
+  text-decoration: none;
+  grid-area: text;
+}
+@media screen and (min-width: 800px) {
+  .Ptext {
+    grid-area: Ptext;
+    margin-left: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+}
+
+figure {
+  grid-area: fig;
+}
+@media only screen and (min-width: 800px) {
+  #UrMission {
+    width: 331px;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  figure {
+    grid-area: fig;
+    margin-bottom: 0px;
+  }
+}
+
+.Pbuttondiv {
+  grid-area: Pbutton;
+  text-decoration: none;
+}
+
+.Pbuttondiv > a,
+button {
+  text-decoration: none;
+}
+.Pbutton {
+  font-size: 65%;
+  float: center;
+  display: block;
+  margin: 0 auto;
+  background-color: #f2c94c;
+  padding: 2px;
+  border-radius: 10px;
+  border: 0px;
+  text-decoration: none;
+  font-style: none;
+  margin-left: 0px;
+  margin-top: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+@media screen and (min-width: 800px) {
+  .Pbutton {
+    padding: 7px;
+    margin: 0px;
+    font-size: 85%;
+    float: center;
+    display: block;
+    margin: 0 auto;
+    background-color: #f2c94c;
+    border-radius: 20px;
+    border: 0px;
+    text-decoration: none;
+    font-style: none;
+  }
+}
+
+.Scontent {
+  font-family: "Times New Roman";
+  font-size: 72.5%;
+  text-align: justify;
+  padding-right: 10px;
+  text-decoration: none;
+  grid-area: Scon;
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "text text"
+    "fig Sbutton";
+}
+@media screen and (min-width: 800px) {
+  .Scontent {
+    grid-area: Scon;
+    font-family: "Times New Roman";
+    font-size: 97.5%;
+    text-align: justify;
+    padding-right: 50px;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 50px;
+    grid-template-areas:
+      "fig Stext"
+      "fig Sbutton";
+  }
+}
+
+.Stext {
+  grid-area: text;
+}
+@media screen and (min-width: 800px) {
+  .Stext {
+    grid-area: Stext;
+    margin-left: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+}
+
+.fig {
+  grid-area: fig;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+@media screen and (min-width: 800px) {
+  .fig {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #UrBenefit {
+    width: 331px;
+    height: 200px;
+  }
+}
+
+.Sbuttondiv {
+  grid-area: Sbutton;
+}
+
+.Sbutton {
+  font-size: 45%;
+  float: center;
+  display: block;
+  margin: 0 auto;
+  background-color: #f2c94c;
+  padding: 2px;
+  border-radius: 8px;
+  border: 0px;
+  text-decoration: none;
+  font-style: none;
+  margin-left: 0px;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 800px) {
+  .Sbutton {
+    font-size: 85%;
+    width: 19%;
+    background-color: #f2c94c;
+    padding: 5px;
+    border-radius: 30px;
+    border: 0px;
+    text-decoration: none;
+    font-style: none;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+}
+
+.Sbuttondiv > a,
+button {
+  text-decoration: none;
+}
+
+.features {
+  background-color: rgb(235, 219, 199);
+  grid-area: feat;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 10px;
+  padding-left: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 50px;
+  grid-template-areas:
+    "t1 t2 t3 t4"
+    "link link link link";
+}
+@media screen and (min-width: 800px) {
+  .features {
+    margin: 0px;
+    padding: 0px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+.t1,
+.t2,
+.t3,
+.t4 {
+  padding-top: 11px;
+  padding-left: 11px;
+  padding-right: 0px;
+  font-family: "Times New Roman";
+  font-size: 65%;
+}
+@media screen and (min-width: 800px) {
+  .t1,
+  .t2,
+  .t3,
+  .t4 {
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 0px;
+    font-size: 87.5%;
+  }
+}
+
+.Lservices {
+  grid-area: link;
+  margin: 0px;
+}
+
+.features > ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.features li {
+  float: left;
+  width: 25%;
+  list-style-type: none;
+  padding: 0px;
+  padding-top: 75px;
+}
+@media screen and (min-width: 800px) {
+  .features li {
+    float: left;
+    width: 25%;
+    list-style-type: none;
+    padding: 0px;
+    padding-top: 35px;
+  }
+}
+
+.features a {
+  display: block;
+  margin: 1px;
+  padding: 1px;
+  padding-right: 8px;
+  border: 0px;
+  border-radius: 20px;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  background-color: #f2c94c;
+  font-size: 72.5%;
+}
+@media screen and (min-width: 800px) {
+  .features a {
+    font-size: 85%;
+  }
+}
+
+.features a:hover {
+  background-color: rgb(71, 170, 13);
+}
+
+.reviews {
+  margin: 0px;
+  grid-area: rev;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 1fr;
+  grid-template-areas:
+    "text text"
+    "fig1 fig2";
+}
+@media screen and (min-width: 800px) {
+  .reviews {
+    margin: 0px;
+    grid-area: rev;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 1fr;
+    grid-template-areas:
+      "text ."
+      "fig1 fig2";
+  }
+}
+
+.reviews > p {
+  font-size: 65%;
+  padding-left: 24px;
+  grid-area: text;
+}
+@media screen and (min-width: 800px) {
+  .reviews > p {
+    padding-left: 24px;
+    text-align: center;
+    font-size: 90.5%;
+  }
+}
+
+.fig1 {
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-top: 5px;
+  grid-area: fig1;
+}
+@media only screen and (min-width: 800px) {
+  #rev1 {
+    width: 325px;
+    height: 180px;
+  }
+}
+
+.fig2 {
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-top: 5px;
+  grid-area: fig2;
+}
+@media only screen and (min-width: 800px) {
+  #rev2 {
+    width: 325px;
+    height: 180px;
+  }
+}
+
+.footer {
+  background-color: rgb(223, 216, 208);
+  margin: 0px;
+  margin-top: 7px;
+  padding-right: 10px;
+  padding-left: 0px;
+  grid-area: foot;
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr;
+  grid-template-rows: 70px 1fr;
+  grid-template-areas:
+    ". Norea ."
+    "linkf . Smedia";
+}
+
+@media screen and (min-width: 800px) {
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+.footer > ul {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 10px;
+  grid-area: linkf;
+}
+
+@media screen and (min-width: 800px) {
+  .footer > ul {
+    margin-top: 0px;
+  }
+}
+
+.footer li {
+  width: 32%;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 5px;
+}
+
+.footer > ul a {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 0px;
+  border: 0px;
+  text-decoration: none;
+  color: black;
+  font-family: "Times New Roman";
+  font-size: 55%;
+}
+
+@media screen and (min-width: 800px) {
+  .footer > ul a {
+    font-size: 85%;
+  }
+}
+
+.norea {
+  grid-area: Norea;
+  margin: 0px;
+  font-family: "Times New Roman";
+  font-size: 70%;
+  text-align: justify;
+  padding-top: 10px;
+  text-decoration: none;
+}
+@media screen and (min-width: 800px) {
+  .norea {
+    font-size: 80%;
+    text-align: justify;
+    padding-top: 0px;
+  }
+}
+
+.norea > p {
+  margin: 0px;
+  padding-top: 3px;
+}
+
+.Smedia {
+  grid-area: Smedia;
+  padding-top: 32px;
+  padding-left: 2px;
+  font-size: 70%;
+}
+@media screen and (min-width: 800px) {
+  .Smedia {
+    padding-top: 30px;
+    padding-left: 100px;
+  }
+}
+
+.Smedia > a {
+  padding: 0px;
+  margin: 0px;
+}
+
+@media screen and (min-width: 800px) {
+  .Smedia > a {
+    font-size: 80%;
+  }
+}
