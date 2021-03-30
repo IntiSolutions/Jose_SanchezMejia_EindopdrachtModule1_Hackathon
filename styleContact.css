@@ -1,0 +1,270 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-size: 100%;
+  margin: 0 auto;
+  width: 98%;
+  clear: both;
+}
+.ParentContact {
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid grey;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr 350px 50px;
+  grid-template-rows: 80px 770px 1fr;
+  grid-template-areas:
+    ". Fmenu header header menu ."
+    "main main main main main main"
+    "foot foot foot foot foot foot";
+}
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  .ParentContact {
+    grid-template-columns: 35px 85px 1fr 1fr;
+    grid-template-rows: 80px 650px 150px;
+    grid-template-areas:
+      "Fmenu header menu menu"
+      "main main main main"
+      "foot foot foot foot";
+  }
+}
+
+.Fmenu {
+  margin: 0px;
+  padding-left: 0px;
+  margin-top: 3px;
+  grid-area: Fmenu;
+}
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  #menuimage {
+    width: 40px;
+    height: 26.16px;
+  }
+}
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: ". logo .";
+}
+.logo {
+  grid-area: logo;
+}
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  #logoimage {
+    width: 90px;
+    height: 55.08px;
+  }
+}
+
+.menu {
+  grid-area: menu;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 0px;
+}
+
+.menu > ul {
+  margin: 0px;
+  padding: 0px;
+}
+.menu li {
+  text-align: center;
+  float: left;
+  width: 21%;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  .menu li {
+    text-align: center;
+    float: left;
+    width: 25%;
+    list-style-type: none;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.menu a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-family: "Times New Roman";
+  font-size: 105%;
+}
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  .menu a {
+    text-align: center;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    padding-right: 0px;
+    border: 0px;
+    text-decoration: none;
+    color: black;
+    font-family: "Times New Roman";
+    font-size: 55%;
+  }
+}
+.menu a:hover {
+  background-color: #f2c94c;
+}
+
+.main {
+  grid-area: main;
+  padding-top: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: rgb(235, 219, 199);
+}
+
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  .main {
+    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.main > p {
+  font-family: "Times New Roman";
+  font-size: 100%;
+  margin: 0 auto;
+  width: 78%;
+  line-height: 20px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  .main > p {
+    font-size: 85%;
+    margin: 0 auto;
+    width: 95%;
+    line-height: 15px;
+    text-align: left;
+  }
+}
+
+.checkbox {
+  margin: 0 auto;
+  width: 53%;
+  padding-top: 20px;
+  text-align: center;
+}
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  .checkbox {
+    font-size: 70%;
+    margin: 0 auto;
+    width: 73%;
+    padding-top: 7px;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+.formtext {
+  margin: 0px;
+  padding: 50px 0px 0px 40px;
+}
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  .formtext {
+    padding: 20px 0px 0px 0px;
+    font-size: 57%;
+  }
+}
+
+.form {
+  float: center;
+  display: block;
+  margin: 0 auto;
+  width: 65%;
+  border: 2px solid #f2c94c;
+}
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  .form {
+    margin: 0 auto;
+    width: 85%;
+    border: 1px solid #f2c94c;
+    font-size: 85%;
+  }
+}
+
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  #txtarea {
+    height: 160px;
+  }
+}
+
+.Mbutton {
+  font-size: 85%;
+  display: block;
+  margin: 0 auto;
+  background-color: #f2c94c;
+  padding: 4px;
+  border-radius: 4px;
+  border: 0px;
+  text-decoration: none;
+  font-style: none;
+  margin-right: 138px;
+}
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  .Mbutton {
+    font-size: 70%;
+    padding: 2px;
+  }
+}
+
+.foot {
+  grid-area: foot;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: rgb(223, 216, 208);
+  font-family: "Times New Roman";
+  text-align: justify;
+  font-size: 100%;
+}
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  .foot {
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: justify;
+    font-size: 60.5%;
+  }
+}
+
+.foot > a {
+  text-decoration: none;
+}
+.Fbutton {
+  font-size: 85%;
+  display: block;
+  background-color: #f2c94c;
+  padding: 5px;
+  border-radius: 30px;
+  border: 0px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 150px) and (max-width: 700px) {
+  .Fbutton {
+    font-size: 60.5%;
+    padding: 2px;
+    border: 0px;
+    margin-top: 30px;
+  }
+}
+
+.Fbuttondiv > a {
+  text-decoration: none;
+}
+.foot > .Smedia {
+  text-align: right;
+}
