@@ -1,0 +1,276 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-size: 100%;
+  margin: 0 auto;
+  width: 99%;
+  clear: both;
+}
+
+.ParentPubli {
+  border: 1px solid grey;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 35px 55px 1fr 1fr;
+  grid-template-rows: 80px 650px 130px;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "foot foot foot foot";
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-areas: "logo menu";
+}
+.logo {
+  grid-area: logo;
+}
+
+.menu {
+  grid-area: menu;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 0px;
+}
+
+.menuflex {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.menuflex > li {
+  flex: 1 1 50%;
+  padding: 0px;
+  margin-left: 60px;
+}
+.menuflex li {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menu a,
+.menu p {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 0px;
+  border: 0px;
+  text-decoration: none;
+  color: black;
+  font-family: "Times New Roman";
+  font-size: 75%;
+  width: 44px;
+}
+.menu a:hover {
+  background-color: #f2c94c;
+}
+
+.main {
+  grid-area: main;
+  padding-top: 25px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: rgb(235, 219, 199);
+  display: grid;
+  grid-template-columns: 8px 1fr 50px;
+  grid-template-rows: 160px 1fr;
+  grid-template-areas:
+    "text text ."
+    "norea norea .";
+}
+.text {
+  font-family: "Times New Roman";
+  font-size: 65%;
+  margin: 0px;
+  width: none;
+  line-height: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 25px;
+  grid-area: text;
+}
+.norea {
+  grid-area: norea;
+  margin: 0 auto;
+  padding-left: 0px;
+}
+
+.foot {
+  grid-area: foot;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: rgb(223, 216, 208);
+  font-family: "Times New Roman";
+  text-align: justify;
+  font-size: 60.5%;
+}
+.foot > a {
+  text-decoration: none;
+}
+.Fbutton {
+  font-size: 60.5%;
+  display: block;
+  background-color: #f2c94c;
+  padding: 2px;
+  border-radius: 30px;
+  border: 0px;
+  text-decoration: none;
+  margin-top: 30px;
+  margin-left: 5px;
+}
+.Fbuttondiv > a {
+  text-decoration: none;
+}
+.foot > .Smedia {
+  text-align: right;
+  margin-right: 18px;
+  padding-right: 2px;
+}
+
+@media screen and (min-width: 700px) {
+  .ParentPubli {
+    grid-template-columns: 35px 1fr 1fr 1fr 405px 35px;
+    grid-template-rows: 80px 780px 1fr;
+    grid-template-areas:
+      ". header header header header ."
+      "main main main main main main"
+      "foot foot foot foot foot foot";
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .header {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". logo menu";
+  }
+}
+@media screen and (min-width: 700px) {
+  #logoimage {
+    width: 118px;
+    height: 73px;
+  }
+}
+@media screen and (min-width: 1065px) {
+  .logo {
+    position: absolute;
+    left: 0px;
+    animation-name: inti;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes inti {
+  from {
+    transform: translateX(-100%) scale(0.05);
+  }
+  to {
+    transform: translateX(400%) scale(1);
+  }
+}
+@media screen and (min-width: 700px) {
+  .menu li {
+    width: 15%;
+    padding-left: 0px;
+    margin-right: 16px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 700px) {
+  .menuflex {
+    flex-wrap: nowrap;
+  }
+  .menuflex li {
+    justify-content: center;
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .menuflex li {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .menuflex li {
+    justify-content: flex-end;
+    flex: 1 1 46%;
+  }
+  .menuflex {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .menuflex {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .menu a,
+  .menu p {
+    font-size: 95%;
+    width: 81px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .main {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .text {
+    font-size: 100%;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #rrss3 {
+    width: 400px;
+    height: 104px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .foot {
+    padding-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 85%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .Fbutton {
+    font-size: 85%;
+    padding: 5px;
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 700px) {
+  #rrss1,
+  #rrss2 {
+    width: 30px;
+    height: 30px;
+  }
+}

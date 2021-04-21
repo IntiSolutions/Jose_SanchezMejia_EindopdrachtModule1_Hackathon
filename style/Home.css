@@ -1,0 +1,644 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-size: 100%;
+  margin: 0 auto;
+  width: 99%;
+}
+.Pcontainer {
+  border: 1px solid grey;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 40px 55px 1fr 1fr;
+  grid-template-rows: 80px 270px 300px 210px 50px 190px;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "foot foot foot foot";
+}
+
+.header {
+  margin: 0px;
+  padding: 0px;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 40px 35px 1fr 1fr;
+  grid-template-areas: "logo logo menu menu";
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.menu {
+  grid-area: menu;
+  margin: 0px;
+  padding: 0px;
+}
+
+.menuflex {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.menuflex > li {
+  flex: 1 1 50%;
+  padding: 0px;
+  margin-left: 60px;
+}
+
+.menu a,
+.menu p {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  text-decoration: none;
+  color: black;
+  font-family: "Times New Roman";
+  font-size: 75%;
+}
+.contact {
+  text-align: left;
+}
+
+.menu a:hover {
+  background-color: #f2c94c;
+}
+
+.main {
+  grid-area: main;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "Pcon Pcon"
+    "Scon Scon"
+    "feat feat"
+    "rev rev";
+}
+
+.Pcontent {
+  margin: 0px;
+  grid-area: Pcon;
+  font-family: "times new roman";
+  font-size: 72.5%;
+  text-align: justify;
+  padding-right: 10px;
+  text-decoration: none;
+  background-color: rgb(235, 219, 199);
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "text text"
+    "fig Pbutton";
+}
+
+.Ptext {
+  margin-left: 0px;
+  margin-bottom: 0px;
+  text-decoration: none;
+  grid-area: text;
+}
+
+figure {
+  grid-area: fig;
+}
+
+.Pbuttondiv {
+  grid-area: Pbutton;
+  text-decoration: none;
+}
+
+.Pbuttondiv > a,
+button {
+  text-decoration: none;
+}
+.Pbutton {
+  font-size: 65%;
+  float: center;
+  display: block;
+  margin: 0 auto;
+  background-color: #f2c94c;
+  padding: 2px;
+  border-radius: 10px;
+  border: 0px;
+  text-decoration: none;
+  font-style: none;
+  margin-left: 0px;
+  margin-top: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.Scontent {
+  font-family: "Times New Roman";
+  font-size: 72.5%;
+  text-align: justify;
+  padding-right: 10px;
+  text-decoration: none;
+  grid-area: Scon;
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-template-rows: 1fr 140px;
+  grid-template-areas:
+    "text text"
+    "fig Sbutton";
+}
+
+.Stext {
+  grid-area: text;
+  margin-top: 8px;
+}
+
+.fig {
+  grid-area: fig;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.Sbuttondiv {
+  grid-area: Sbutton;
+}
+
+.Sbutton {
+  font-size: 45%;
+  float: center;
+  display: block;
+  margin: 0 auto;
+  background-color: #f2c94c;
+  padding: 2px;
+  border-radius: 8px;
+  border: 0px;
+  text-decoration: none;
+  font-style: none;
+  margin-left: 0px;
+  margin-top: 50px;
+}
+
+.Sbuttondiv > a,
+button {
+  text-decoration: none;
+}
+
+.features {
+  background-color: rgb(235, 219, 199);
+  grid-area: feat;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 10px;
+  padding-left: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-template-areas:
+    "t1 t2 t3 t4"
+    "link link link link";
+}
+
+.t1,
+.t2,
+.t3,
+.t4 {
+  padding-top: 11px;
+  padding-left: 11px;
+  padding-right: 0px;
+  font-family: "Times New Roman";
+  font-size: 65%;
+}
+
+.Lservices {
+  grid-area: link;
+  margin: 0px;
+}
+
+.features > ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.features li {
+  float: left;
+  width: 25%;
+  list-style-type: none;
+  padding: 0px;
+  padding-top: 75px;
+}
+
+.features a {
+  display: block;
+  margin: 1px;
+  padding: 1px;
+  padding-right: 8px;
+  border: 0px;
+  border-radius: 20px;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  background-color: #f2c94c;
+  font-size: 72.5%;
+}
+
+.features a:hover {
+  background-color: rgb(71, 170, 13);
+}
+
+.reviews {
+  margin: 0px;
+  grid-area: rev;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 100px;
+  grid-template-areas:
+    "text text"
+    "fig1 fig2";
+}
+
+.reviews > p {
+  font-size: 65%;
+  padding-left: 24px;
+  grid-area: text;
+}
+
+.fig1 {
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-top: 5px;
+  grid-area: fig1;
+}
+
+.fig2 {
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-top: 5px;
+  grid-area: fig2;
+}
+
+.footer {
+  background-color: rgb(223, 216, 208);
+  margin: 0px;
+  margin-top: 7px;
+  padding-right: 10px;
+  padding-left: 0px;
+  grid-area: foot;
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    ". Norea ."
+    "linkf . Smedia";
+}
+
+.footer > ul {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 10px;
+  grid-area: linkf;
+}
+.footer li {
+  width: 32%;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 5px;
+}
+
+.footer > ul a {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 0px;
+  border: 0px;
+  text-decoration: none;
+  color: black;
+  font-family: "Times New Roman";
+  font-size: 55%;
+}
+
+.norea {
+  grid-area: Norea;
+  margin: 0px;
+  font-family: "Times New Roman";
+  font-size: 70%;
+  text-align: justify;
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.norea > p {
+  margin: 0px;
+  padding-top: 3px;
+}
+
+.Smedia {
+  grid-area: Smedia;
+  padding-top: 32px;
+  padding-left: 2px;
+  font-size: 70%;
+}
+
+.Smedia > a {
+  padding: 0px;
+  margin: 0px;
+}
+
+@media screen and (min-width: 700px) {
+  .Pcontainer {
+    grid-template-columns: 20px 128px 0.8fr 1fr 200px 170px 50px 20px;
+    grid-template-rows: 80px 1fr 1fr 175px 1fr 150px;
+    grid-template-areas:
+      ". . . header header header header ."
+      "main main main main main main main main"
+      "main main main main main main main main"
+      "main main main main main main main main"
+      "main main main main main main main main"
+      "foot foot foot foot foot foot foot foot";
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    grid-template-columns: 20px 150px 1fr 1fr 200px 170px 50px 20px;
+    grid-template-areas: "logo . . menu menu menu menu menu";
+  }
+}
+@media screen and (min-width: 700px) {
+  #logoimage {
+    width: 118px;
+    height: 73px;
+  }
+}
+@media screen and (min-width: 1065px) {
+  .logo {
+    position: absolute;
+    left: 0px;
+    animation-name: inti;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes inti {
+  from {
+    transform: translateX(-100%) scale(0.05);
+  }
+  to {
+    transform: translateX(400%) scale(1);
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 700px) {
+  .menuflex {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .menuflex {
+    flex-wrap: nowrap;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 700px) {
+  .menuflex li {
+    flex: 1 1 100%;
+  }
+}
+@media screen and (min-width: 400px) {
+  .menuflex li {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .menu a,
+  .menu p {
+    font-size: 95%;
+    width: 85px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .main {
+    display: grid;
+    grid-template-columns: 20px 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "Pcon Pcon Pcon Pcon"
+      "Scon Scon Scon Scon"
+      "feat feat feat feat"
+      "rev rev rev rev";
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .Pcontent {
+    font-size: 97.5%;
+    text-align: justify;
+    padding-right: 50px;
+    background-color: rgb(235, 219, 199);
+    grid-template-columns: 20px 1fr 1fr;
+    grid-template-rows: 1fr 40px;
+    grid-template-areas:
+      ". fig Ptext"
+      ". fig Pbutton";
+  }
+}
+@media screen and (min-width: 700px) {
+  .Ptext {
+    grid-area: Ptext;
+    margin-left: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  #UrMission {
+    width: 331px;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 700px) {
+  figure {
+    grid-area: fig;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .Pbutton {
+    padding: 7px;
+    margin: 0px;
+    font-size: 85%;
+    float: center;
+    display: block;
+    margin: 0 auto;
+    background-color: #f2c94c;
+    border-radius: 20px;
+    border: 0px;
+    text-decoration: none;
+    font-style: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .Scontent {
+    grid-area: Scon;
+    font-family: "Times New Roman";
+    font-size: 97.5%;
+    text-align: justify;
+    padding-right: 50px;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 20px 1fr 1fr;
+    grid-template-rows: 1fr 50px;
+    grid-template-areas:
+      ". fig Stext"
+      ". fig Sbutton";
+  }
+}
+@media screen and (min-width: 700px) {
+  .Stext {
+    grid-area: Stext;
+    margin-left: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  .fig {
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (min-width: 700px) {
+  #UrBenefit {
+    width: 331px;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .Sbutton {
+    font-size: 85%;
+    width: 19%;
+    background-color: #f2c94c;
+    padding: 5px;
+    border-radius: 30px;
+    border: 0px;
+    text-decoration: none;
+    font-style: none;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .features {
+    margin: 0px;
+    padding: 0px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .t1,
+  .t2,
+  .t3,
+  .t4 {
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 0px;
+    font-size: 87.5%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .features li {
+    float: left;
+    width: 25%;
+    list-style-type: none;
+    padding: 0px;
+    padding-top: 35px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .features a {
+    font-size: 85%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .reviews {
+    margin: 0px;
+    grid-area: rev;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 1fr;
+    grid-template-areas:
+      "text ."
+      "fig1 fig2";
+  }
+}
+@media screen and (min-width: 700px) {
+  .reviews > p {
+    padding-left: 24px;
+    text-align: center;
+    font-size: 90.5%;
+  }
+}
+@media only screen and (min-width: 700px) {
+  #rev1 {
+    width: 325px;
+    height: 180px;
+  }
+}
+@media only screen and (min-width: 700px) {
+  #rev2 {
+    width: 325px;
+    height: 180px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .footer > ul {
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .footer > ul a {
+    font-size: 85%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .norea {
+    font-size: 80%;
+    text-align: justify;
+    padding-top: 0px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .Smedia {
+    padding-top: 10px;
+    padding-left: 80px;
+    font-size: 87.5%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #rrss1,
+  #rrss2 {
+    width: 30px;
+    height: 30px;
+  }
+}

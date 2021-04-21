@@ -1,0 +1,323 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-size: 100%;
+  margin: 0 auto;
+  width: 99%;
+  clear: both;
+}
+
+.ParentFirm {
+  width: 100%;
+  border: 1px solid grey;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 35px 45px 1fr 1fr;
+  grid-template-rows: 80px 1fr 150px;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "foot foot foot foot";
+}
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  grid-template-areas: "logo menu";
+}
+.logo {
+  grid-area: logo;
+}
+
+.menu {
+  grid-area: menu;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 0px;
+}
+
+.menuflex {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.menuflex > li {
+  flex: 1 1 50%;
+  padding: 0px;
+  margin-left: 60px;
+}
+.menuflex li {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menu a,
+.menu p {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  text-decoration: none;
+  color: black;
+  font-family: "Times New Roman";
+  font-size: 75%;
+  width: 44px;
+}
+.menu a:hover {
+  background-color: #f2c94c;
+}
+
+.main {
+  grid-area: main;
+  padding: 0px;
+  background-color: rgb(235, 219, 199);
+}
+.main > p {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.Mtext {
+  font-family: "Times New Roman";
+  text-align: justify;
+  line-height: 20px;
+  text-decoration: none;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 70%;
+  width: 85%;
+}
+
+.Mtext > a {
+  text-decoration: none;
+}
+.Mtext > h3 {
+  margin-bottom: 25px;
+  line-height: 0px;
+  font-size: 15px;
+  margin-top: 25px;
+}
+
+.Mul {
+  margin-top: 2px;
+  padding-left: 20px;
+}
+
+.Mbutton {
+  display: block;
+  background-color: #f2c94c;
+  border-radius: 30px;
+  border: 0px;
+  text-decoration: none;
+  font-size: 65%;
+  padding: 4px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.Mbuttondiv > a {
+  text-decoration: none;
+}
+
+.foot {
+  grid-area: foot;
+  padding-top: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: rgb(223, 216, 208);
+  font-family: "Times New Roman";
+  text-align: justify;
+  font-size: 60.5%;
+}
+.foot > a {
+  text-decoration: none;
+}
+.Fbutton {
+  font-size: 60.5%;
+  display: block;
+  background-color: #f2c94c;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 2px;
+  border: 0px;
+  margin-top: 30px;
+}
+
+.Fbuttondiv {
+  margin-top: 50px;
+  text-decoration: none;
+}
+.Fbuttondiv > a {
+  text-decoration: none;
+}
+.Smedia {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: right;
+}
+
+@media screen and (min-width: 700px) {
+  .ParentFirm {
+    grid-template-columns: 40px 1fr 1fr 1fr 405px 40px;
+    grid-template-rows: 80px 780px 1fr;
+    grid-template-areas:
+      ". header header header header ."
+      "main main main main main main"
+      "foot foot foot foot foot foot";
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    grid-template-columns: 1fr 1fr 400px;
+    grid-template-areas: ". logo menu";
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #logoimage {
+    width: 118px;
+    height: 73px;
+  }
+}
+@media screen and (min-width: 1065px) {
+  .logo {
+    position: absolute;
+    left: 0px;
+    animation-name: inti;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes inti {
+  from {
+    transform: translateX(-100%) scale(0.05);
+  }
+  to {
+    transform: translateX(400%) scale(1);
+  }
+}
+@media screen and (min-width: 700px) {
+  .menu li {
+    text-align: center;
+    float: left;
+    width: 16%;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-right: 14px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 700px) {
+  .menuflex {
+    flex-wrap: nowrap;
+  }
+  .menuflex li {
+    justify-content: center;
+    padding: 0px;
+    margin-left: 0px;
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .menuflex li {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .menuflex li {
+    justify-content: flex-end;
+    flex: 1 1 46%;
+  }
+  .menuflex {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1065px) {
+  .menuflex {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  .menuflex li {
+    justify-content: flex-end;
+  }
+  .header {
+    grid-template-columns: 100px 0.7fr;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .menu a,
+  .menu p {
+    font-size: 98%;
+    width: 81px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .Mtext {
+    margin-left: 100px;
+    font-size: 100%;
+    width: 75%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .Mtext > h3 {
+    margin-top: 50px;
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .Mul {
+    padding-left: 35px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .Mbutton {
+    font-size: 85%;
+    padding: 9px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .foot {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 85%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .Fbutton {
+    font-size: 85%;
+    padding: 5px;
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 700px) {
+  #rrss1,
+  #rrss2 {
+    width: 30px;
+    height: 30px;
+  }
+}
